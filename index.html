@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anna Minasyan - Premium Front-End Developer Portfolio"
+    />
+    <title>Anna Minasyan | Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="loader__ring"></div>
+      <p class="loader__text">Loading Portfolio</p>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="background-shapes" aria-hidden="true">
+      <span class="shape shape--one"></span>
+      <span class="shape shape--two"></span>
+      <span class="shape shape--three"></span>
+    </div>
+
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="#hero" class="logo">Anna<span>.</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
+          <li><a href="#education" data-i18n="nav.education">Образование</a></li>
+          <li><a href="#languages" data-i18n="nav.languages">Языки</a></li>
+          <li><a href="#qualities" data-i18n="nav.qualities">Качества</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hy">HY</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow" data-i18n="hero.greeting">Привет, я</p>
+            <h1 class="hero__name">Anna Minasyan</h1>
+            <h2 class="hero__role" id="typingText"></h2>
+            <p class="hero__description" data-i18n="hero.description">
+              Я создаю современные, аккуратные и масштабируемые интерфейсы с
+              фокусом на UX, производительность и эстетику.
+            </p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary" data-i18n="hero.contactBtn"
+                >Связаться</a
+              >
+              <a href="#" class="btn btn--ghost" data-i18n="hero.cvBtn"
+                >Скачать CV</a
+              >
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub" class="social-link">
+                <img src="./assets/icons/github.svg" alt="" class="social-icon" />
+              </a>
+              <a href="#" aria-label="LinkedIn" class="social-link">
+                <img src="./assets/icons/linkedin.svg" alt="" class="social-icon" />
+              </a>
+              <a
+                href="mailto:annaminasyan1016@gmail.com"
+                aria-label="Email"
+                class="social-link"
+              >
+                <img src="./assets/icons/mail.svg" alt="" class="social-icon" />
+              </a>
+            </div>
+          </div>
+          <div class="hero__card reveal delay-2">
+            <div class="glass-card">
+              <p data-i18n="hero.cardTitle">Front-End Developer</p>
+              <h3 data-i18n="hero.cardSubtitle">Premium UI Engineering</h3>
+              <ul>
+                <li data-i18n="hero.cardItem1">Современная архитектура</li>
+                <li data-i18n="hero.cardItem2">Чистый адаптивный UI</li>
+                <li data-i18n="hero.cardItem3">Плавные анимации и UX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="divider"></section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="about.label">Обо мне</p>
+            <h2 data-i18n="about.title">Создаю цифровой опыт высокого уровня</h2>
+          </div>
+          <article class="about-card reveal delay-1">
+            <p data-i18n="about.text">
+              Я Front-End Developer, который превращает идеи в элегантные и
+              эффективные интерфейсы. Работаю на стыке дизайна и инженерии:
+              уделяю внимание деталям, доступности, структуре кода и
+              производительности.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="skills.label">Навыки</p>
+            <h2 data-i18n="skills.title">Технологический стек</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal" data-tilt><span>🌐</span><h3>HTML5</h3><div class="progress"><i style="--w: 95%"></i></div></article>
+            <article class="skill-card reveal delay-1" data-tilt><span>🎨</span><h3>CSS3</h3><div class="progress"><i style="--w: 93%"></i></div></article>
+            <article class="skill-card reveal delay-2" data-tilt><span>⚡</span><h3>JavaScript</h3><div class="progress"><i style="--w: 90%"></i></div></article>
+            <article class="skill-card reveal" data-tilt><span>🧩</span><h3>TypeScript</h3><div class="progress"><i style="--w: 78%"></i></div></article>
+            <article class="skill-card reveal delay-1" data-tilt><span>⚛️</span><h3>React.js</h3><div class="progress"><i style="--w: 85%"></i></div></article>
+            <article class="skill-card reveal delay-2" data-tilt><span>🛠️</span><h3>Redux Toolkit</h3><div class="progress"><i style="--w: 82%"></i></div></article>
+            <article class="skill-card reveal" data-tilt><span>🔧</span><h3>Git</h3><div class="progress"><i style="--w: 88%"></i></div></article>
+            <article class="skill-card reveal delay-1" data-tilt><span>✨</span><h3>Figma</h3><div class="progress"><i style="--w: 80%"></i></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="education.label">Образование и курсы</p>
+            <h2 data-i18n="education.title">Профессиональный путь развития</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-card reveal">
+              <h3 data-i18n="education.uniTitle">National Polytechnic University of Armenia</h3>
+              <p data-i18n="education.uniDesc">Information Technologies</p>
+              <span data-i18n="education.master">Master's Degree · 2025 - 2027</span>
+            </article>
+            <article class="timeline-card reveal delay-1">
+              <h3>Armenian Code Academy</h3>
+              <p data-i18n="education.course1">ACA Advanced JavaScript Course</p>
+            </article>
+            <article class="timeline-card reveal delay-2">
+              <h3>ACA &amp; BostonGene</h3>
+              <p data-i18n="education.course2">React Course</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="languages">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="languages.label">Языки</p>
+            <h2 data-i18n="languages.title">Мультиязычная коммуникация</h2>
+          </div>
+          <div class="languages-grid">
+            <article class="language-card reveal"><h3 data-i18n="languages.arm">Armenian</h3><p data-i18n="languages.armLevel">Native</p></article>
+            <article class="language-card reveal delay-1"><h3 data-i18n="languages.ru">Russian</h3><p>B2</p></article>
+            <article class="language-card reveal delay-2"><h3 data-i18n="languages.en">English</h3><p>B1</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="qualities">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="qualities.label">Личные качества</p>
+            <h2 data-i18n="qualities.title">Ключевые сильные стороны</h2>
+          </div>
+          <div class="qualities-grid">
+            <article class="quality-card reveal" data-i18n="qualities.q1">Fast learner</article>
+            <article class="quality-card reveal delay-1" data-i18n="qualities.q2">Responsibility</article>
+            <article class="quality-card reveal delay-2" data-i18n="qualities.q3">Analytical thinking</article>
+            <article class="quality-card reveal" data-i18n="qualities.q4">Time management</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="contact.label">Контакты</p>
+            <h2 data-i18n="contact.title">Давайте создадим что-то выдающееся</h2>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:annaminasyan1016@gmail.com">annaminasyan1016@gmail.com</a></li>
+              <li>Phone: <a href="tel:+37498399513">+37498399513</a></li>
+              <li>GitHub: <a href="#">github.com/your-profile</a></li>
+              <li>LinkedIn: <a href="#">linkedin.com/in/your-profile</a></li>
+            </ul>
+          </div>
+          <form class="contact-form reveal delay-1">
+            <label>
+              <span data-i18n="contact.name">Имя</span>
+              <input type="text" placeholder="Anna" />
+            </label>
+            <label>
+              <span data-i18n="contact.email">Email</span>
+              <input type="email" placeholder="you@email.com" />
+            </label>
+            <label>
+              <span data-i18n="contact.message">Сообщение</span>
+              <textarea rows="4" placeholder="Let's work together"></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary" data-i18n="contact.send">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>© <span id="year"></span> Anna Minasyan</p>
+        <p data-i18n="footer.text">Premium Front-End Portfolio</p>
+      </div>
+    </footer>
+
+    <script src="./js/translations.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
