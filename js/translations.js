@@ -17,9 +17,13 @@ const translations = {
     "hero.cardItem2": "Чистый адаптивный UI",
     "hero.cardItem3": "Плавные анимации и UX",
     "about.label": "Обо мне",
-    "about.title": "Создаю цифровой опыт высокого уровня",
+    "about.title": "Создаю современные веб-интерфейсы",
     "about.text":
-      "Я Front-End Developer, который превращает идеи в элегантные и эффективные интерфейсы. Работаю на стыке дизайна и инженерии: уделяю внимание деталям, доступности, структуре кода и производительности.",
+      "Я — увлечённый Front-End разработчик, который интересуется созданием современных, адаптивных и удобных веб-приложений. Мне нравится превращать идеи в стильные и интерактивные цифровые решения, используя такие технологии, как HTML5, CSS3, JavaScript, React.js и TypeScript.\n\nЯ постоянно развиваю свои навыки, работая над реальными проектами, изучая новые технологии и следя за современными тенденциями в дизайне. Особое внимание уделяю чистому коду, деталям и созданию интерфейсов, которые одновременно являются функциональными и визуально привлекательными.\n\nЯ ответственный, целеустремлённый и всегда стремлюсь профессионально расти как разработчик, участвуя в интересных и инновационных проектах.",
+    "about.role": "Front-End Developer",
+    "about.tag1": "UI и UX",
+    "about.tag2": "Чистый код",
+    "about.tag3": "Производительность",
     "skills.label": "Навыки",
     "skills.title": "Технологический стек",
     "education.label": "Образование и курсы",
@@ -27,6 +31,7 @@ const translations = {
     "education.uniTitle": "Национальный Политехнический Университет Армении",
     "education.uniDesc": "Информационные технологии",
     "education.master": "Магистратура · 2025 - 2027",
+    "education.bachelor": "Бакалавриат · 2021 - 2025",
     "education.course1": "ACA Продвинутый курс JavaScript",
     "education.course2": "Курс React",
     "languages.label": "Языки",
@@ -47,7 +52,7 @@ const translations = {
     "contact.email": "Email",
     "contact.message": "Сообщение",
     "contact.send": "Отправить",
-    "footer.text": "Premium Front-End Portfolio"
+    "footer.text": "Premium Front-End Portfolio",
   },
   en: {
     "nav.about": "About",
@@ -67,9 +72,13 @@ const translations = {
     "hero.cardItem2": "Clean responsive UI",
     "hero.cardItem3": "Smooth motion and UX",
     "about.label": "About",
-    "about.title": "Crafting high-quality digital experiences",
+    "about.title": "Creating Modern Web Experiences",
     "about.text":
-      "I am a Front-End Developer who transforms ideas into elegant and efficient interfaces. I work at the intersection of design and engineering, focusing on details, accessibility, code quality, and performance.",
+      "I am a passionate Front-End Developer with a strong interest in creating modern, responsive, and user-friendly web applications. I enjoy turning ideas into clean and interactive digital experiences using technologies such as HTML5, CSS3, JavaScript, React.js, and TypeScript.\n\nI continuously improve my skills by working on real projects, learning new technologies, and exploring modern design trends. I pay great attention to detail, clean code, and creating interfaces that are both functional and visually appealing.\n\n I am motivated, responsible, and always eager to grow as a developer while contributing to meaningful and innovative projects.",
+    "about.role": "Front-End Developer",
+    "about.tag1": "UI & UX",
+    "about.tag2": "Clean Code",
+    "about.tag3": "Performance",
     "skills.label": "Skills",
     "skills.title": "Technology Stack",
     "education.label": "Education & Courses",
@@ -77,6 +86,7 @@ const translations = {
     "education.uniTitle": "National Polytechnic University of Armenia",
     "education.uniDesc": "Information Technologies",
     "education.master": "Master's Degree · 2025 - 2027",
+    "education.bachelor": "Bachelor's degree · 2021 - 2025",
     "education.course1": "ACA Advanced JavaScript Course",
     "education.course2": "React Course",
     "languages.label": "Languages",
@@ -97,7 +107,7 @@ const translations = {
     "contact.email": "Email",
     "contact.message": "Message",
     "contact.send": "Send",
-    "footer.text": "Premium Front-End Portfolio"
+    "footer.text": "Premium Front-End Portfolio",
   },
   hy: {
     "nav.about": "Իմ մասին",
@@ -117,9 +127,13 @@ const translations = {
     "hero.cardItem2": "Մաքուր ադապտիվ UI",
     "hero.cardItem3": "Սահուն անիմացիաներ և UX",
     "about.label": "Իմ մասին",
-    "about.title": "Ստեղծում եմ բարձրակարգ թվային փորձ",
+    "about.title": "Ստեղծում եմ ժամանակակից վեբ փորձառություններ",
     "about.text":
-      "Ես Front-End Developer եմ, ով գաղափարները վերածում է էլեգանտ և արդյունավետ ինտերֆեյսների։ Աշխատում եմ դիզայնի և ինժեներիայի հատման կետում` ուշադրություն դարձնելով դետալներին, հասանելիությանը, կոդի որակին և կատարողականությանը։",
+      "Ես հետաքրքրված և նպատակասլաց Front-End ծրագրավորող եմ, ով սիրում է ստեղծել ժամանակակից, ադապտիվ և օգտագործման համար հարմար վեբ հավելվածներ։ Ինձ դուր է գալիս գաղափարները վերածել գեղեցիկ և ինտերակտիվ թվային լուծումների՝ օգտագործելով HTML5, CSS3, JavaScript, React.js և TypeScript տեխնոլոգիաները։\n\nԵս մշտապես զարգացնում եմ իմ հմտությունները՝ աշխատելով իրական նախագծերի վրա, ուսումնասիրելով նոր տեխնոլոգիաներ և հետևելով ժամանակակից դիզայնի միտումներին։ Մեծ ուշադրություն եմ դարձնում մաքուր կոդին, մանրուքներին և այնպիսի ինտերֆեյսների ստեղծմանը, որոնք միաժամանակ և՛ ֆունկցիոնալ են, և՛ տեսողականորեն գրավիչ։\n\nԵս պատասխանատու, մոտիվացված և շարունակաբար զարգանալու ձգտող ծրագրավորող եմ, ով ցանկանում է մասնակցել հետաքրքիր և նորարարական նախագծերի ստեղծմանը։",
+    "about.role": "Front-End Developer",
+    "about.tag1": "UI և UX",
+    "about.tag2": "Մաքուր կոդ",
+    "about.tag3": "Կատարողականություն",
     "skills.label": "Հմտություններ",
     "skills.title": "Տեխնոլոգիական stack",
     "education.label": "Կրթություն և դասընթացներ",
@@ -127,6 +141,7 @@ const translations = {
     "education.uniTitle": "Հայաստանի ազգային պոլիտեխնիկական համալսարան",
     "education.uniDesc": "Տեղեկատվական տեխնոլոգիաներ",
     "education.master": "Մագիստրատուրա · 2025 - 2027",
+    "education.bachelor": "Բակալավր · 2021 - 2025",
     "education.course1": "ACA խորացված JavaScript դասընթաց",
     "education.course2": "React դասընթաց",
     "languages.label": "Լեզուներ",
@@ -147,6 +162,6 @@ const translations = {
     "contact.email": "Էլ. փոստ",
     "contact.message": "Հաղորդագրություն",
     "contact.send": "Ուղարկել",
-    "footer.text": "Premium Front-End Portfolio"
-  }
+    "footer.text": "Premium Front-End Portfolio",
+  },
 };

@@ -41,8 +41,8 @@
   animation-delay: -4s;
 }
 
-.hero__card {
-  animation: floatY 5s ease-in-out infinite;
+.hero__visual {
+  animation: floatY 6s ease-in-out infinite;
 }
 
 .reveal {

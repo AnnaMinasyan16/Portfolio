@@ -4,6 +4,15 @@
     grid-template-columns: 1fr;
   }
 
+  .hero__visual {
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-photo-frame {
+    width: min(280px, 72vw);
+  }
+
   .skills-grid,
   .languages-grid,
   .qualities-grid {

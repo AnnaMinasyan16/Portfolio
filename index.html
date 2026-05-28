@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -42,7 +42,9 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
           <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
-          <li><a href="#education" data-i18n="nav.education">Образование</a></li>
+          <li>
+            <a href="#education" data-i18n="nav.education">Образование</a>
+          </li>
           <li><a href="#languages" data-i18n="nav.languages">Языки</a></li>
           <li><a href="#qualities" data-i18n="nav.qualities">Качества</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
@@ -67,19 +69,44 @@
               фокусом на UX, производительность и эстетику.
             </p>
             <div class="hero__actions">
-              <a href="#contact" class="btn btn--primary" data-i18n="hero.contactBtn"
+              <a
+                href="#contact"
+                class="btn btn--primary"
+                data-i18n="hero.contactBtn"
                 >Связаться</a
               >
-              <a href="#" class="btn btn--ghost" data-i18n="hero.cvBtn"
+              <a
+                href="./assets/pdf/ԱննաՄինասյանCV.pdf"
+                download
+                class="btn btn--ghost"
+                data-i18n="hero.cvBtn"
                 >Скачать CV</a
               >
             </div>
             <div class="social-links">
-              <a href="#" aria-label="GitHub" class="social-link">
-                <img src="./assets/icons/github.svg" alt="" class="social-icon" />
+              <a
+                href="https://github.com/AnnaMinasyan16"
+                target="_blank"
+                aria-label="GitHub"
+                class="social-link"
+              >
+                <img
+                  src="./assets/icons/github.svg"
+                  alt=""
+                  class="social-icon"
+                />
               </a>
-              <a href="#" aria-label="LinkedIn" class="social-link">
-                <img src="./assets/icons/linkedin.svg" alt="" class="social-icon" />
+              <a
+                href="https://www.linkedin.com/in/anna-minasyan-a11112367"
+                target="_blank"
+                aria-label="LinkedIn"
+                class="social-link"
+              >
+                <img
+                  src="./assets/icons/linkedin.svg"
+                  alt=""
+                  class="social-icon"
+                />
               </a>
               <a
                 href="mailto:annaminasyan1016@gmail.com"
@@ -90,15 +117,18 @@
               </a>
             </div>
           </div>
-          <div class="hero__card reveal delay-2">
-            <div class="glass-card">
-              <p data-i18n="hero.cardTitle">Front-End Developer</p>
-              <h3 data-i18n="hero.cardSubtitle">Premium UI Engineering</h3>
-              <ul>
-                <li data-i18n="hero.cardItem1">Современная архитектура</li>
-                <li data-i18n="hero.cardItem2">Чистый адаптивный UI</li>
-                <li data-i18n="hero.cardItem3">Плавные анимации и UX</li>
-              </ul>
+          <div class="hero__visual reveal delay-2">
+            <div class="hero-photo-frame">
+              <div class="hero-photo-ring" aria-hidden="true"></div>
+              <div class="hero-photo-glow" aria-hidden="true"></div>
+              <img
+                src="./assets/images/profile.png"
+                alt="Anna Minasyan"
+                class="hero-photo"
+                width="400"
+                height="500"
+                loading="eager"
+              />
             </div>
           </div>
         </div>
@@ -110,7 +140,9 @@
         <div class="container">
           <div class="section-header reveal">
             <p class="eyebrow" data-i18n="about.label">Обо мне</p>
-            <h2 data-i18n="about.title">Создаю цифровой опыт высокого уровня</h2>
+            <h2 data-i18n="about.title">
+              Создаю цифровой опыт высокого уровня
+            </h2>
           </div>
           <article class="about-card reveal delay-1">
             <p data-i18n="about.text">
@@ -130,14 +162,46 @@
             <h2 data-i18n="skills.title">Технологический стек</h2>
           </div>
           <div class="skills-grid">
-            <article class="skill-card reveal" data-tilt><span>🌐</span><h3>HTML5</h3><div class="progress"><i style="--w: 95%"></i></div></article>
-            <article class="skill-card reveal delay-1" data-tilt><span>🎨</span><h3>CSS3</h3><div class="progress"><i style="--w: 93%"></i></div></article>
-            <article class="skill-card reveal delay-2" data-tilt><span>⚡</span><h3>JavaScript</h3><div class="progress"><i style="--w: 90%"></i></div></article>
-            <article class="skill-card reveal" data-tilt><span>🧩</span><h3>TypeScript</h3><div class="progress"><i style="--w: 78%"></i></div></article>
-            <article class="skill-card reveal delay-1" data-tilt><span>⚛️</span><h3>React.js</h3><div class="progress"><i style="--w: 85%"></i></div></article>
-            <article class="skill-card reveal delay-2" data-tilt><span>🛠️</span><h3>Redux Toolkit</h3><div class="progress"><i style="--w: 82%"></i></div></article>
-            <article class="skill-card reveal" data-tilt><span>🔧</span><h3>Git</h3><div class="progress"><i style="--w: 88%"></i></div></article>
-            <article class="skill-card reveal delay-1" data-tilt><span>✨</span><h3>Figma</h3><div class="progress"><i style="--w: 80%"></i></div></article>
+            <article class="skill-card reveal" data-tilt>
+              <span>🌐</span>
+              <h3>HTML5</h3>
+              <div class="progress"><i style="--w: 95%"></i></div>
+            </article>
+            <article class="skill-card reveal delay-1" data-tilt>
+              <span>🎨</span>
+              <h3>CSS3</h3>
+              <div class="progress"><i style="--w: 93%"></i></div>
+            </article>
+            <article class="skill-card reveal delay-2" data-tilt>
+              <span>⚡</span>
+              <h3>JavaScript</h3>
+              <div class="progress"><i style="--w: 90%"></i></div>
+            </article>
+            <article class="skill-card reveal" data-tilt>
+              <span>🧩</span>
+              <h3>TypeScript</h3>
+              <div class="progress"><i style="--w: 78%"></i></div>
+            </article>
+            <article class="skill-card reveal delay-1" data-tilt>
+              <span>⚛️</span>
+              <h3>React.js</h3>
+              <div class="progress"><i style="--w: 85%"></i></div>
+            </article>
+            <article class="skill-card reveal delay-2" data-tilt>
+              <span>🛠️</span>
+              <h3>Redux Toolkit</h3>
+              <div class="progress"><i style="--w: 82%"></i></div>
+            </article>
+            <article class="skill-card reveal" data-tilt>
+              <span>🔧</span>
+              <h3>Git</h3>
+              <div class="progress"><i style="--w: 88%"></i></div>
+            </article>
+            <article class="skill-card reveal delay-1" data-tilt>
+              <span>✨</span>
+              <h3>Figma</h3>
+              <div class="progress"><i style="--w: 80%"></i></div>
+            </article>
           </div>
         </div>
       </section>
@@ -145,22 +209,37 @@
       <section class="section" id="education">
         <div class="container">
           <div class="section-header reveal">
-            <p class="eyebrow" data-i18n="education.label">Образование и курсы</p>
+            <p class="eyebrow" data-i18n="education.label">
+              Образование и курсы
+            </p>
             <h2 data-i18n="education.title">Профессиональный путь развития</h2>
           </div>
           <div class="timeline">
             <article class="timeline-card reveal">
-              <h3 data-i18n="education.uniTitle">National Polytechnic University of Armenia</h3>
+              <h3 data-i18n="education.uniTitle">
+                National Polytechnic University of Armenia
+              </h3>
               <p data-i18n="education.uniDesc">Information Technologies</p>
-              <span data-i18n="education.master">Master's Degree · 2025 - 2027</span>
+              <span data-i18n="education.master"
+                >Master's Degree · 2025 - 2027</span
+              >
             </article>
             <article class="timeline-card reveal delay-1">
               <h3>Armenian Code Academy</h3>
-              <p data-i18n="education.course1">ACA Advanced JavaScript Course</p>
+              <p data-i18n="education.course1">
+                ACA Advanced JavaScript Course
+              </p>
             </article>
             <article class="timeline-card reveal delay-2">
               <h3>ACA &amp; BostonGene</h3>
               <p data-i18n="education.course2">React Course</p>
+            </article>
+            <article class="timeline-card reveal delay-1">
+              <h3>National Polytechnic University of Armenia</h3>
+              <p data-i18n="education.uniDesc">Information Technologies</p>
+              <span data-i18n="education.bachelor"
+                >Bachelor's degree · 2021 - 2025</span
+              >
             </article>
           </div>
         </div>
@@ -173,9 +252,18 @@
             <h2 data-i18n="languages.title">Мультиязычная коммуникация</h2>
           </div>
           <div class="languages-grid">
-            <article class="language-card reveal"><h3 data-i18n="languages.arm">Armenian</h3><p data-i18n="languages.armLevel">Native</p></article>
-            <article class="language-card reveal delay-1"><h3 data-i18n="languages.ru">Russian</h3><p>B2</p></article>
-            <article class="language-card reveal delay-2"><h3 data-i18n="languages.en">English</h3><p>B1</p></article>
+            <article class="language-card reveal">
+              <h3 data-i18n="languages.arm">Armenian</h3>
+              <p data-i18n="languages.armLevel">Native</p>
+            </article>
+            <article class="language-card reveal delay-1">
+              <h3 data-i18n="languages.ru">Russian</h3>
+              <p>B2</p>
+            </article>
+            <article class="language-card reveal delay-2">
+              <h3 data-i18n="languages.en">English</h3>
+              <p>B1</p>
+            </article>
           </div>
         </div>
       </section>
@@ -187,10 +275,24 @@
             <h2 data-i18n="qualities.title">Ключевые сильные стороны</h2>
           </div>
           <div class="qualities-grid">
-            <article class="quality-card reveal" data-i18n="qualities.q1">Fast learner</article>
-            <article class="quality-card reveal delay-1" data-i18n="qualities.q2">Responsibility</article>
-            <article class="quality-card reveal delay-2" data-i18n="qualities.q3">Analytical thinking</article>
-            <article class="quality-card reveal" data-i18n="qualities.q4">Time management</article>
+            <article class="quality-card reveal" data-i18n="qualities.q1">
+              Fast learner
+            </article>
+            <article
+              class="quality-card reveal delay-1"
+              data-i18n="qualities.q2"
+            >
+              Responsibility
+            </article>
+            <article
+              class="quality-card reveal delay-2"
+              data-i18n="qualities.q3"
+            >
+              Analytical thinking
+            </article>
+            <article class="quality-card reveal" data-i18n="qualities.q4">
+              Time management
+            </article>
           </div>
         </div>
       </section>
@@ -199,12 +301,29 @@
         <div class="container contact-grid">
           <div class="section-header reveal">
             <p class="eyebrow" data-i18n="contact.label">Контакты</p>
-            <h2 data-i18n="contact.title">Давайте создадим что-то выдающееся</h2>
+            <h2 data-i18n="contact.title">
+              Давайте создадим что-то выдающееся
+            </h2>
             <ul class="contact-list">
-              <li>Email: <a href="mailto:annaminasyan1016@gmail.com">annaminasyan1016@gmail.com</a></li>
+              <li>
+                Email:
+                <a href="mailto:annaminasyan1016@gmail.com"
+                  >annaminasyan1016@gmail.com</a
+                >
+              </li>
               <li>Phone: <a href="tel:+37498399513">+37498399513</a></li>
-              <li>GitHub: <a href="#">github.com/your-profile</a></li>
-              <li>LinkedIn: <a href="#">linkedin.com/in/your-profile</a></li>
+              <li>
+                GitHub:
+                <a href="https://github.com/AnnaMinasyan16"
+                  >github.com/AnnaMinasyan16</a
+                >
+              </li>
+              <li>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/anna-minasyan-a11112367"
+                  >linkedin.com/in/anna-minasyan-a11112367</a
+                >
+              </li>
             </ul>
           </div>
           <form class="contact-form reveal delay-1">
@@ -220,7 +339,11 @@
               <span data-i18n="contact.message">Сообщение</span>
               <textarea rows="4" placeholder="Let's work together"></textarea>
             </label>
-            <button type="submit" class="btn btn--primary" data-i18n="contact.send">
+            <button
+              type="submit"
+              class="btn btn--primary"
+              data-i18n="contact.send"
+            >
               Отправить
             </button>
           </form>
