@@ -435,6 +435,7 @@ ul {
 .language-card,
 .quality-card,
 .skill-card,
+.project-card,
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -497,33 +498,6 @@ ul {
 .skill-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 22px 30px rgba(127, 130, 217, 0.22);
-}
-
-.skill-card span {
-  display: inline-block;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.skill-card h3 {
-  margin-bottom: 0.7rem;
-  font-size: 1rem;
-}
-
-.progress {
-  width: 100%;
-  height: 7px;
-  border-radius: 999px;
-  background: rgba(127, 130, 217, 0.17);
-  overflow: hidden;
-}
-
-.progress i {
-  display: block;
-  width: 0;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent), #a0bdd7);
 }
 
 .timeline {

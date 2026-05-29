@@ -64,10 +64,6 @@
   transition-delay: 0.24s;
 }
 
-.skill-card.visible .progress i {
-  animation: widthGrow 1.1s ease forwards;
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

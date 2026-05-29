@@ -15,8 +15,13 @@
 
   .skills-grid,
   .languages-grid,
-  .qualities-grid {
+  .qualities-grid,
+  .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-modal__body {
+    grid-template-columns: 1fr;
   }
 
   .hero {
@@ -75,7 +80,8 @@
 @media (max-width: 540px) {
   .skills-grid,
   .languages-grid,
-  .qualities-grid {
+  .qualities-grid,
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 

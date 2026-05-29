@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animations.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
   </head>
   <body>
     <div class="loader" id="loader">
@@ -42,6 +43,7 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
           <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
           <li>
             <a href="#education" data-i18n="nav.education">Образование</a>
           </li>
@@ -162,47 +164,65 @@
             <h2 data-i18n="skills.title">Технологический стек</h2>
           </div>
           <div class="skills-grid">
-            <article class="skill-card reveal" data-tilt>
-              <span>🌐</span>
+            <article class="skill-card reveal">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/html5.png" alt="HTML5" width="34" height="34" />
+              </div>
               <h3>HTML5</h3>
-              <div class="progress"><i style="--w: 95%"></i></div>
             </article>
-            <article class="skill-card reveal delay-1" data-tilt>
-              <span>🎨</span>
+            <article class="skill-card reveal delay-1">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/css3.png" alt="CSS3" width="34" height="34" />
+              </div>
               <h3>CSS3</h3>
-              <div class="progress"><i style="--w: 93%"></i></div>
             </article>
-            <article class="skill-card reveal delay-2" data-tilt>
-              <span>⚡</span>
+            <article class="skill-card reveal delay-2">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/javascript.png" alt="JavaScript" width="34" height="34" />
+              </div>
               <h3>JavaScript</h3>
-              <div class="progress"><i style="--w: 90%"></i></div>
             </article>
-            <article class="skill-card reveal" data-tilt>
-              <span>🧩</span>
+            <article class="skill-card reveal">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/typescript.png" alt="TypeScript" width="34" height="34" />
+              </div>
               <h3>TypeScript</h3>
-              <div class="progress"><i style="--w: 78%"></i></div>
             </article>
-            <article class="skill-card reveal delay-1" data-tilt>
-              <span>⚛️</span>
+            <article class="skill-card reveal delay-1">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/react.png" alt="React.js" width="34" height="34" />
+              </div>
               <h3>React.js</h3>
-              <div class="progress"><i style="--w: 85%"></i></div>
             </article>
-            <article class="skill-card reveal delay-2" data-tilt>
-              <span>🛠️</span>
+            <article class="skill-card reveal delay-2">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/redux.png" alt="Redux Toolkit" width="34" height="34" />
+              </div>
               <h3>Redux Toolkit</h3>
-              <div class="progress"><i style="--w: 82%"></i></div>
             </article>
-            <article class="skill-card reveal" data-tilt>
-              <span>🔧</span>
+            <article class="skill-card reveal">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/git.png" alt="Git" width="34" height="34" />
+              </div>
               <h3>Git</h3>
-              <div class="progress"><i style="--w: 88%"></i></div>
             </article>
-            <article class="skill-card reveal delay-1" data-tilt>
-              <span>✨</span>
+            <article class="skill-card reveal delay-1">
+              <div class="skill-card__icon">
+                <img src="./assets/icons/skills/figma.png" alt="Figma" width="34" height="34" />
+              </div>
               <h3>Figma</h3>
-              <div class="progress"><i style="--w: 80%"></i></div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="projects.label">Мои проекты</p>
+            <h2 data-i18n="projects.title">My Projects</h2>
+          </div>
+          <div class="projects-grid" id="projectsGrid"></div>
         </div>
       </section>
 
@@ -326,30 +346,125 @@
               </li>
             </ul>
           </div>
-          <form class="contact-form reveal delay-1">
+          <form class="contact-form reveal delay-1" id="contactForm" novalidate>
             <label>
               <span data-i18n="contact.name">Имя</span>
-              <input type="text" placeholder="Anna" />
+              <input type="text" id="contactName" name="name" required placeholder="Anna" />
             </label>
             <label>
               <span data-i18n="contact.email">Email</span>
-              <input type="email" placeholder="you@email.com" />
+              <input
+                type="email"
+                id="contactEmail"
+                name="email"
+                required
+                placeholder="you@email.com"
+              />
             </label>
             <label>
               <span data-i18n="contact.message">Сообщение</span>
-              <textarea rows="4" placeholder="Let's work together"></textarea>
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="4"
+                required
+                placeholder="Let's work together"
+              ></textarea>
             </label>
             <button
               type="submit"
               class="btn btn--primary"
+              id="contactSubmitBtn"
               data-i18n="contact.send"
             >
               Отправить
             </button>
+            <p class="contact-form__error" id="contactFormError" hidden></p>
           </form>
         </div>
       </section>
     </main>
+
+    <div class="project-modal" id="projectModal" hidden>
+      <div class="project-modal__backdrop" id="modalBackdrop"></div>
+      <div
+        class="project-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalProjectTitle"
+      >
+        <header class="project-modal__header">
+          <h3 id="modalProjectTitle">Project</h3>
+          <button type="button" class="modal-close" id="modalClose" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="project-modal__body">
+          <div class="modal-gallery">
+            <div class="modal-gallery__main" id="modalGalleryMain"></div>
+            <div class="modal-gallery__controls">
+              <button
+                type="button"
+                class="modal-gallery__arrow"
+                id="modalGalleryPrev"
+                aria-label="Previous"
+              >
+                ‹
+              </button>
+              <div class="modal-gallery__track" id="modalGalleryTrack"></div>
+              <button
+                type="button"
+                class="modal-gallery__arrow"
+                id="modalGalleryNext"
+                aria-label="Next"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="modal-info">
+            <p id="modalProjectDesc"></p>
+            <div class="modal-tech-list" id="modalProjectTech"></div>
+            <a
+              href="#"
+              id="modalGithubBtn"
+              class="btn btn--primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="projects.openProject"
+              >Открыть проект</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirm-modal" id="contactSuccessModal" hidden>
+      <div class="confirm-modal__backdrop" id="contactSuccessBackdrop"></div>
+      <div
+        class="confirm-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contactSuccessTitle"
+      >
+        <div class="confirm-modal__icon" aria-hidden="true">✓</div>
+        <h3 id="contactSuccessTitle" data-i18n="contact.successTitle">
+          Сообщение отправлено
+        </h3>
+        <p data-i18n="contact.success">
+          Спасибо! Ваше сообщение успешно отправлено. Я свяжусь с вами в ближайшее
+          время.
+        </p>
+        <button
+          type="button"
+          class="btn btn--primary confirm-modal__ok"
+          id="contactSuccessOk"
+          data-i18n="contact.ok"
+        >
+          ОК
+        </button>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container footer__content">
@@ -358,7 +473,9 @@
       </div>
     </footer>
 
+    <script src="./js/config.js"></script>
     <script src="./js/translations.js"></script>
+    <script src="./js/projects.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/app.js"></script>
   </body>

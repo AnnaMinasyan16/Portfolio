@@ -1,5 +1,9 @@
-function setupRevealAnimations() {
-  const revealItems = document.querySelectorAll(".reveal");
+function observeReveal(items) {
+  const revealItems =
+    items instanceof NodeList || Array.isArray(items)
+      ? items
+      : document.querySelectorAll(".reveal:not(.visible)");
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -13,6 +17,10 @@ function setupRevealAnimations() {
   );
 
   revealItems.forEach((item) => observer.observe(item));
+}
+
+function setupRevealAnimations() {
+  observeReveal(document.querySelectorAll(".reveal"));
 }
 
 function setupParallax() {
@@ -37,6 +45,7 @@ function setupProgressBar() {
 
 window.PortfolioAnimations = {
   setupRevealAnimations,
+  observeReveal,
   setupParallax,
   setupProgressBar
 };
