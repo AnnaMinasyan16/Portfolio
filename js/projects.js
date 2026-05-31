@@ -45,7 +45,7 @@ const projectsData = [
     id: "todolist",
     name: "ToDoList",
     url: `https://github.com/${GITHUB_USER}/ToDoList`,
-    demoUrl: "",
+    demoUrl: "https://to-do-list-hazel-delta.vercel.app/",
     tech: ["JavaScript", "HTML5", "CSS3"],
     images: [
       "./assets/images/projects/todolist/1.png",

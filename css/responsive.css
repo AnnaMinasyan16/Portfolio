@@ -49,6 +49,74 @@
 }
 
 @media (max-width: 760px) {
+  .project-modal {
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .project-modal__dialog {
+    width: 100%;
+    max-height: min(94dvh, 100%);
+    padding: 0.85rem 0.9rem 1rem;
+    border-radius: var(--radius);
+  }
+
+  .project-modal__header {
+    margin-bottom: 0.65rem;
+    gap: 0.65rem;
+  }
+
+  .project-modal__header h3 {
+    font-size: 1.05rem;
+  }
+
+  .modal-close {
+    width: 34px;
+    height: 34px;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .modal-gallery__img {
+    max-height: min(34vh, 240px);
+  }
+
+  .modal-gallery__controls {
+    margin-top: 0.45rem;
+    gap: 0.25rem;
+  }
+
+  .modal-gallery__arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .modal-gallery__track {
+    max-width: calc(100% - 4rem);
+  }
+
+  .modal-thumb {
+    flex: 0 0 52px;
+    height: 38px;
+  }
+
+  .modal-info p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
   .navbar {
     flex-wrap: wrap;
     padding: 0.8rem 0;
@@ -126,6 +194,25 @@
 
   .lang-switcher {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-modal {
+    padding: 0.35rem;
+  }
+
+  .project-modal__dialog {
+    padding: 0.75rem 0.8rem 0.9rem;
+  }
+
+  .modal-gallery__img {
+    max-height: min(30vh, 200px);
+  }
+
+  .modal-tech-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
   }
 }
 
