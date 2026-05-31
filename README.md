@@ -1,10 +1,8 @@
-# Anna Minasyan - Premium Front-End Portfolio
+# Anna Minasyan - Portfolio
 
 Современный, минималистичный и премиальный персональный landing page-портфолио, реализованный на чистом `HTML5`, `CSS3` и `Vanilla JavaScript` без фреймворков и UI-библиотек.
 
 ## О проекте
-
-Этот проект демонстрирует профессиональный подход к созданию UI уровня senior front-end developer:
 
 - аккуратная визуальная система (soft glassmorphism, pastel palette, clean spacing),
 - продуманная архитектура файлов,
@@ -17,15 +15,6 @@
 - `HTML5`
 - `CSS3`
 - `Vanilla JavaScript`
-
-Не используются:
-
-- React / Vue
-- Tailwind / Bootstrap
-- jQuery
-- SCSS / SASS
-- TypeScript
-- любые внешние UI/JS frameworks
 
 ## Ключевые возможности
 
@@ -124,14 +113,6 @@ Portfolio/
 - Плавные, но не перегруженные эффекты
 - Оптимальная основа для дальнейшего масштабирования (мультиязычность, контентные блоки, интеграция форм)
 
-## Deployment
-
-Проект готов к деплою как статический сайт:
-
-- GitHub Pages
-- Netlify
-- Vercel (static)
-- любой CDN/static hosting
 
 ## Автор
 
@@ -140,5 +121,4 @@ Front-End Developer
 
 - Email: [annaminasyan1016@gmail.com](mailto:annaminasyan1016@gmail.com)
 - Phone: `+37498399513`
-- GitHub: `your-profile`
-- LinkedIn: `your-profile`
+
