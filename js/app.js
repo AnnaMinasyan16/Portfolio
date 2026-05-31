@@ -107,21 +107,6 @@ function setupMicroInteractions() {
       btn.style.transform = "";
     });
   });
-
-  const tiltItems = document.querySelectorAll("[data-tilt]");
-  tiltItems.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width;
-      const y = (event.clientY - rect.top) / rect.height;
-      const rotateY = (x - 0.5) * 8;
-      const rotateX = (0.5 - y) * 8;
-      card.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-    });
-  });
 }
 
 function setupFooterYear() {
@@ -162,6 +147,65 @@ function setupContactSuccessModal() {
   document.addEventListener("keydown", (event) => {
     if (modal?.hidden) return;
     if (event.key === "Escape") closeContactSuccessModal();
+  });
+}
+
+function openCertificateLightbox(img) {
+  const modal = document.getElementById("certificateLightbox");
+  const lightboxImg = document.getElementById("certificateLightboxImg");
+  if (!modal || !lightboxImg || !img?.src) return;
+
+  lightboxImg.src = img.currentSrc || img.src;
+  lightboxImg.alt = img.alt || "";
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  requestAnimationFrame(() => modal.classList.add("is-visible"));
+  document.getElementById("certificateLightboxClose")?.focus();
+}
+
+function closeCertificateLightbox() {
+  const modal = document.getElementById("certificateLightbox");
+  if (!modal) return;
+
+  modal.classList.remove("is-visible");
+  document.body.classList.remove("modal-open");
+
+  setTimeout(() => {
+    modal.hidden = true;
+    const lightboxImg = document.getElementById("certificateLightboxImg");
+    if (lightboxImg) {
+      lightboxImg.removeAttribute("src");
+      lightboxImg.alt = "";
+    }
+  }, 280);
+}
+
+function setupCertificateLightbox() {
+  const modal = document.getElementById("certificateLightbox");
+  const closeBtn = document.getElementById("certificateLightboxClose");
+  const backdrop = document.getElementById("certificateLightboxBackdrop");
+
+  document.querySelectorAll(".certificate-card__img").forEach((img) => {
+    img.setAttribute("role", "button");
+    img.setAttribute("tabindex", "0");
+
+    const open = () => openCertificateLightbox(img);
+
+    img.addEventListener("click", open);
+    img.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open();
+      }
+    });
+  });
+
+  closeBtn?.addEventListener("click", closeCertificateLightbox);
+  backdrop?.addEventListener("click", closeCertificateLightbox);
+
+  document.addEventListener("keydown", (event) => {
+    if (modal?.hidden) return;
+    if (event.key === "Escape") closeCertificateLightbox();
   });
 }
 
@@ -246,10 +290,12 @@ function init() {
   setupLoader();
   setupMicroInteractions();
   setupContactSuccessModal();
+  setupCertificateLightbox();
   setupContactForm();
   setupFooterYear();
   PortfolioAnimations.setupRevealAnimations();
   PortfolioProjects.initProjects();
+  PortfolioProjects.updateProjectLabels();
   PortfolioAnimations.setupParallax();
   PortfolioAnimations.setupProgressBar();
 }

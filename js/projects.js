@@ -1,24 +1,22 @@
 const GITHUB_USER = "AnnaMinasyan16";
 
+/**
+ * url     — GitHub repo (Open Code)
+ * demoUrl — live host link: Netlify, GitHub Pages, Vercel, etc. (Open Project)
+ */
 const projectsData = [
-  {
-    id: "portfolio",
-    name: "Portfolio",
-    url: `https://github.com/${GITHUB_USER}/Portfolio`,
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    colors: ["#eef2f7", "#e4e8f4", "#d8dff0", "#f5e1da"],
-    description: {
-      ru: "Персональный портфолио-сайт с премиальным UI, мультиязычностью и плавными анимациями.",
-      en: "Personal portfolio website with premium UI, multilingual support, and smooth animations.",
-      hy: "Անձնական պորտֆոլիո կայք՝ պրեմիում UI, բազմալեզուության և սահուն անիմացիաների հետ։",
-    },
-  },
   {
     id: "taskmanagement",
     name: "TaskManagement",
     url: `https://github.com/${GITHUB_USER}/TaskManagement`,
+    demoUrl: `https://task-management-orcin-eight.vercel.app/`,
     tech: ["JavaScript", "HTML5", "CSS3"],
-    colors: ["#e8edf5", "#dce4f2", "#cfd9ee", "#c2cee8"],
+    images: [
+      "./assets/images/projects/taskmanagement/1.png",
+      "./assets/images/projects/taskmanagement/2.png",
+      "./assets/images/projects/taskmanagement/3.png",
+      "./assets/images/projects/taskmanagement/4.png",
+    ],
     description: {
       ru: "Приложение для управления задачами с удобным интерфейсом и логикой работы со списками.",
       en: "Task management application with a clean interface and list workflow logic.",
@@ -29,8 +27,14 @@ const projectsData = [
     id: "libraryapp",
     name: "LibraryApp",
     url: `https://github.com/${GITHUB_USER}/LibraryApp`,
+    demoUrl: "https://library-app-tan-eight.vercel.app/",
     tech: ["JavaScript", "HTML5", "CSS3"],
-    colors: ["#f3f0fa", "#ebe6f5", "#e2ddf0", "#d8d2eb"],
+    images: [
+      "./assets/images/projects/libraryapp/1.png",
+      "./assets/images/projects/libraryapp/2.png",
+      "./assets/images/projects/libraryapp/3.png",
+      "./assets/images/projects/libraryapp/4.png",
+    ],
     description: {
       ru: "Веб-приложение библиотеки для работы с книгами и структурированным каталогом.",
       en: "Library web application for managing books and a structured catalog.",
@@ -41,8 +45,14 @@ const projectsData = [
     id: "todolist",
     name: "ToDoList",
     url: `https://github.com/${GITHUB_USER}/ToDoList`,
+    demoUrl: "",
     tech: ["JavaScript", "HTML5", "CSS3"],
-    colors: ["#f8f7f4", "#f1eef6", "#ebe8f4", "#e4ecf3"],
+    images: [
+      "./assets/images/projects/todolist/1.png",
+      "./assets/images/projects/todolist/2.png",
+      "./assets/images/projects/todolist/3.png",
+      "./assets/images/projects/todolist/4.png",
+    ],
     description: {
       ru: "Интерактивный To-Do список с добавлением, редактированием и фильтрацией задач.",
       en: "Interactive to-do list with add, edit, and filter functionality.",
@@ -50,51 +60,21 @@ const projectsData = [
     },
   },
   {
-    id: "hotelpage",
-    name: "HotelPage",
-    url: `https://github.com/${GITHUB_USER}/HotelPage`,
-    tech: ["HTML5", "CSS3"],
-    colors: ["#efe3d5", "#f5e1da", "#f8f0eb", "#ebe4dc"],
+    id: "healthcareapp",
+    name: "HealthCareApp",
+    url: "https://github.com/ordinyanlilia/Hospital_App",
+    demoUrl: "https://healthcare-7fe99.web.app/",
+    tech: ["React.js", "Firebase", "JavaScript"],
+    images: [
+      "./assets/images/projects/healthcareapp/1.png",
+      "./assets/images/projects/healthcareapp/2.png",
+      "./assets/images/projects/healthcareapp/3.png",
+      "./assets/images/projects/healthcareapp/4.png",
+    ],
     description: {
-      ru: "Лендинг отеля с аккуратной вёрсткой, адаптивной сеткой и визуальной иерархией.",
-      en: "Hotel landing page with clean layout, responsive grid, and visual hierarchy.",
-      hy: "Հյուրանոցի լենդինգ՝ կոկիկ դասավորությամբ, ադապտիվ ցանցով և հստակ հիերարխիայով։",
-    },
-  },
-  {
-    id: "todo-list-css",
-    name: "To-Do-List",
-    url: `https://github.com/${GITHUB_USER}/To-Do-List`,
-    tech: ["HTML5", "CSS3"],
-    colors: ["#eef2f7", "#e8edf5", "#dfe8f2", "#d5e0ef"],
-    description: {
-      ru: "Стилизованный To-Do интерфейс с фокусом на CSS и современный визуальный дизайн.",
-      en: "Styled to-do interface focused on CSS and modern visual design.",
-      hy: "Ոճավորված To-Do ինտերֆեյս՝ կենտրոնացած CSS-ի և ժամանակակից դիզայնի վրա։",
-    },
-  },
-  {
-    id: "weather",
-    name: "Weather",
-    url: `https://github.com/${GITHUB_USER}/Weather`,
-    tech: ["JavaScript", "HTML5", "CSS3", "API"],
-    colors: ["#dce8f4", "#cfe0f0", "#c0d6ec", "#b2cce8"],
-    description: {
-      ru: "Погодное приложение с запросами к API и отображением актуальных данных.",
-      en: "Weather application with API requests and real-time data display.",
-      hy: "Եղանակի հավելված՝ API հարցումներով և արդի տվյալների ցուցադրմամբ։",
-    },
-  },
-  {
-    id: "todo-list-js",
-    name: "To-Do-List-",
-    url: `https://github.com/${GITHUB_USER}/To-Do-List-`,
-    tech: ["JavaScript", "HTML5", "CSS3"],
-    colors: ["#f1eef6", "#ebe8f4", "#e4e0f0", "#ddd8ec"],
-    description: {
-      ru: "JavaScript-версия To-Do приложения с динамическим управлением задачами.",
-      en: "JavaScript to-do app with dynamic task management.",
-      hy: "To-Do հավելվածի JavaScript տարբերակ՝ դինամիկ առաջադրանքների կառավարմամբ։",
+      ru: "Веб-приложение для управления больничными процессами, записями пациентов и медицинскими данными.Приложение Health Care App было разработано в рамках курса React. Это был командный проект, и я отвечал(а) за личную страницу врача, где врач может просматривать закреплённых за ним пациентов и другие функции.",
+      en: "Healthcare web application for hospital workflows, patient records, and medical data management.The Health Care App was developed as part of a React course. It was a team project, and I was responsible for the doctor’s personal page, where the doctor can view the patients assigned to them, among other features.",
+      hy: "Առողջապահական վեբ հավելված՝ հիվանդանոցային գործընթացների, պացիենտների գրառումների և բժշկական տվյալների կառավարման համար։Health Care App-ը մշակվել է React դասընթացի շրջանակներում։ Այն թիմային նախագիծ էր, և ես պատասխանատու էի բժշկի անձնական էջի համար, որտեղ բժիշկը կարող է տեսնել իրեն կցված պացիենտներին և այլ հնարավորություններ։",
     },
   },
 ];
@@ -118,19 +98,43 @@ function renderProjectCards() {
   grid.innerHTML = projectsData
     .map(
       (project, index) => `
-    <article class="project-card reveal${index % 3 === 1 ? " delay-1" : index % 3 === 2 ? " delay-2" : ""}" data-project-id="${project.id}">
-      <div class="project-card__shine" aria-hidden="true"></div>
-      <h3 class="project-card__title">${project.name}</h3>
-      <button type="button" class="btn btn--ghost project-card__btn" data-open-project="${project.id}">
-        ${t("projects.open")}
-      </button>
+    <article
+      class="project-card reveal${index % 4 === 1 ? " delay-1" : index % 4 === 2 ? " delay-2" : index % 4 === 3 ? " delay-1" : ""}"
+      data-open-project="${project.id}"
+      role="button"
+      tabindex="0"
+      aria-label="${project.name}"
+    >
+      <div class="project-card__inner">
+        <img
+          src="${project.images[0]}"
+          alt=""
+          class="project-card__preview"
+          loading="lazy"
+        />
+        <div class="project-card__overlay">
+          <div class="project-card__content">
+            <span class="project-card__line" aria-hidden="true"></span>
+            <h3 class="project-card__title">${project.name}</h3>
+            <span class="project-card__hint">${t("projects.view")}</span>
+          </div>
+        </div>
+      </div>
     </article>
-  `
+  `,
     )
     .join("");
 
-  grid.querySelectorAll("[data-open-project]").forEach((btn) => {
-    btn.addEventListener("click", () => openProjectModal(btn.dataset.openProject));
+  grid.querySelectorAll("[data-open-project]").forEach((card) => {
+    const open = () => openProjectModal(card.dataset.openProject);
+
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open();
+      }
+    });
   });
 
   if (window.PortfolioAnimations?.observeReveal) {
@@ -139,13 +143,43 @@ function renderProjectCards() {
 }
 
 function updateProjectLabels() {
-  document.querySelectorAll(".project-card__btn").forEach((btn) => {
-    btn.textContent = t("projects.open");
+  document.querySelectorAll(".project-card__hint").forEach((el) => {
+    el.textContent = t("projects.view");
   });
+
+  const projectBtn = document.getElementById("modalProjectBtn");
+  const codeBtn = document.getElementById("modalCodeBtn");
+  if (projectBtn) projectBtn.textContent = t("projects.openProject");
+  if (codeBtn) codeBtn.textContent = t("projects.openCode");
 
   const modal = document.getElementById("projectModal");
   if (modal && !modal.hidden && activeProjectId) {
     fillModalContent(activeProjectId);
+  }
+}
+
+function normalizeDemoUrl(url) {
+  if (!url?.trim()) return "";
+  const trimmed = url.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
+function setModalLink(linkEl, url, labelKey) {
+  if (!linkEl) return;
+
+  const safeUrl = normalizeDemoUrl(url);
+  linkEl.textContent = t(labelKey);
+
+  if (safeUrl) {
+    linkEl.href = safeUrl;
+    linkEl.hidden = false;
+    linkEl.setAttribute("target", "_blank");
+    linkEl.setAttribute("rel", "noopener noreferrer");
+  } else {
+    linkEl.removeAttribute("href");
+    linkEl.removeAttribute("target");
+    linkEl.hidden = true;
   }
 }
 
@@ -163,34 +197,39 @@ function fillModalContent(projectId) {
     .map((tech) => `<span class="modal-tech-tag">${tech}</span>`)
     .join("");
 
-  const githubBtn = document.getElementById("modalGithubBtn");
-  githubBtn.href = project.url;
-  githubBtn.textContent = t("projects.openProject");
+  const projectBtn = document.getElementById("modalProjectBtn");
+  const codeBtn = document.getElementById("modalCodeBtn");
+
+  setModalLink(projectBtn, project.demoUrl, "projects.openProject");
+  setModalLink(codeBtn, project.url, "projects.openCode");
 
   renderGallery(project, activeSlideIndex);
 }
 
 function renderGallery(project, index) {
-  const slides = project.colors;
+  const slides = project.images || [];
+  if (!slides.length) return;
+
   const safeIndex = ((index % slides.length) + slides.length) % slides.length;
   activeSlideIndex = safeIndex;
 
   const main = document.getElementById("modalGalleryMain");
-  main.style.background = slides[safeIndex];
+  main.innerHTML = `<img src="${slides[safeIndex]}" alt="${project.name} — screenshot ${safeIndex + 1}" class="modal-gallery__img" loading="lazy" />`;
   main.setAttribute("aria-label", `${project.name} preview ${safeIndex + 1}`);
 
   const track = document.getElementById("modalGalleryTrack");
   track.innerHTML = slides
     .map(
-      (color, i) => `
+      (src, i) => `
     <button
       type="button"
       class="modal-thumb${i === safeIndex ? " active" : ""}"
-      style="background:${color}"
       data-slide="${i}"
       aria-label="Slide ${i + 1}"
-    ></button>
-  `
+    >
+      <img src="${src}" alt="" class="modal-thumb__img" loading="lazy" />
+    </button>
+  `,
     )
     .join("");
 
@@ -258,5 +297,4 @@ function initProjects() {
 window.PortfolioProjects = {
   initProjects,
   updateProjectLabels,
-  renderProjectCards,
 };

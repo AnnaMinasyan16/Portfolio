@@ -16,8 +16,8 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animations.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <div class="loader" id="loader">
@@ -46,6 +46,9 @@
           <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
           <li>
             <a href="#education" data-i18n="nav.education">Образование</a>
+          </li>
+          <li>
+            <a href="#certificates" data-i18n="nav.certificates">Сертификаты</a>
           </li>
           <li><a href="#languages" data-i18n="nav.languages">Языки</a></li>
           <li><a href="#qualities" data-i18n="nav.qualities">Качества</a></li>
@@ -265,6 +268,51 @@
         </div>
       </section>
 
+      <section class="section" id="certificates">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow" data-i18n="certificates.label">Certificates</p>
+            <h2 data-i18n="certificates.title">Verified credentials</h2>
+          </div>
+          <div class="certificates-grid">
+            <article class="certificate-card reveal">
+              <div class="certificate-card__preview">
+                <img
+                  src="./assets/images/certificates/aca-javascript.png"
+                  alt="ACA JavaScript Profession certificate — Anna Minasyan"
+                  class="certificate-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="certificates.cert1.title">
+                ACA Advanced JavaScript Course
+              </h3>
+              <p data-i18n="certificates.cert1.issuer">Armenian Code Academy</p>
+              <span data-i18n="certificates.cert1.date">January, 2025</span>
+            </article>
+            <article class="certificate-card reveal delay-1">
+              <div class="certificate-card__preview certificate-card__preview--stack">
+                <img
+                  src="./assets/images/certificates/aca-react.png"
+                  alt="React.js course certificate of graduation — Anna Minasyan"
+                  class="certificate-card__img"
+                  loading="lazy"
+                />
+                <img
+                  src="./assets/images/certificates/aca-react-topics.png"
+                  alt="React.js course covered topics — Anna Minasyan"
+                  class="certificate-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="certificates.cert2.title">React Course</h3>
+              <p data-i18n="certificates.cert2.issuer">ACA &amp; BostonGene</p>
+              <span data-i18n="certificates.cert2.date">June 13, 2025</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="languages">
         <div class="container">
           <div class="section-header reveal">
@@ -405,7 +453,7 @@
             <div class="modal-gallery__controls">
               <button
                 type="button"
-                class="modal-gallery__arrow"
+                class="modal-gallery__arrow modal-gallery__arrow--prev"
                 id="modalGalleryPrev"
                 aria-label="Previous"
               >
@@ -414,7 +462,7 @@
               <div class="modal-gallery__track" id="modalGalleryTrack"></div>
               <button
                 type="button"
-                class="modal-gallery__arrow"
+                class="modal-gallery__arrow modal-gallery__arrow--next"
                 id="modalGalleryNext"
                 aria-label="Next"
               >
@@ -425,15 +473,22 @@
           <div class="modal-info">
             <p id="modalProjectDesc"></p>
             <div class="modal-tech-list" id="modalProjectTech"></div>
-            <a
-              href="#"
-              id="modalGithubBtn"
-              class="btn btn--primary"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n="projects.openProject"
-              >Открыть проект</a
-            >
+            <div class="modal-actions">
+              <a
+                id="modalProjectBtn"
+                class="btn btn--primary"
+                hidden
+                data-i18n="projects.openProject"
+                >Открыть проект</a
+              >
+              <a
+                id="modalCodeBtn"
+                class="btn btn--ghost"
+                hidden
+                data-i18n="projects.openCode"
+                >Открыть код</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -466,10 +521,36 @@
       </div>
     </div>
 
+    <div class="certificate-lightbox" id="certificateLightbox" hidden>
+      <div
+        class="certificate-lightbox__backdrop"
+        id="certificateLightboxBackdrop"
+      ></div>
+      <div
+        class="certificate-lightbox__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Certificate preview"
+      >
+        <button
+          type="button"
+          class="certificate-lightbox__close"
+          id="certificateLightboxClose"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <img
+          id="certificateLightboxImg"
+          class="certificate-lightbox__img"
+          alt=""
+        />
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container footer__content">
         <p>© <span id="year"></span> Anna Minasyan</p>
-        <p data-i18n="footer.text">Premium Front-End Portfolio</p>
       </div>
     </footer>
 
