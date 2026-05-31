@@ -81,6 +81,21 @@ const projectsData = [
 
 let activeProjectId = null;
 let activeSlideIndex = 0;
+let modalScrollY = 0;
+
+function lockPageScroll() {
+  modalScrollY = window.scrollY;
+  document.documentElement.classList.add("modal-open");
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${modalScrollY}px`;
+}
+
+function unlockPageScroll() {
+  document.documentElement.classList.remove("modal-open");
+  document.body.classList.remove("modal-open");
+  document.body.style.top = "";
+  window.scrollTo(0, modalScrollY);
+}
 
 function getLang() {
   return localStorage.getItem("portfolioLanguage") || "ru";
@@ -253,8 +268,7 @@ function openProjectModal(projectId) {
   const modal = document.getElementById("projectModal");
   fillModalContent(projectId);
   modal.hidden = false;
-  document.documentElement.classList.add("modal-open");
-  document.body.classList.add("modal-open");
+  lockPageScroll();
 
   requestAnimationFrame(() => modal.classList.add("is-visible"));
 }
@@ -262,8 +276,7 @@ function openProjectModal(projectId) {
 function closeProjectModal() {
   const modal = document.getElementById("projectModal");
   modal.classList.remove("is-visible");
-  document.documentElement.classList.remove("modal-open");
-  document.body.classList.remove("modal-open");
+  unlockPageScroll();
 
   setTimeout(() => {
     modal.hidden = true;
