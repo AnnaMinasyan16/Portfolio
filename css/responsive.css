@@ -50,13 +50,20 @@
 
 @media (max-width: 760px) {
   .project-modal {
-    padding: 0.5rem;
+    padding:
+      max(0.5rem, env(safe-area-inset-top, 0px))
+      max(0.5rem, env(safe-area-inset-right, 0px))
+      max(0.5rem, env(safe-area-inset-bottom, 0px))
+      max(0.5rem, env(safe-area-inset-left, 0px));
     align-items: center;
   }
 
   .project-modal__dialog {
     width: 100%;
-    max-height: min(94dvh, 100%);
+    max-width: 100%;
+    max-height: calc(100dvh - 1rem);
+    min-height: 0;
+    margin: auto;
     padding: 0.85rem 0.9rem 1rem;
     border-radius: var(--radius);
   }
@@ -71,14 +78,18 @@
   }
 
   .modal-close {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
     font-size: 1.25rem;
     flex-shrink: 0;
   }
 
+  .project-modal__body {
+    gap: 0.65rem;
+  }
+
   .modal-gallery__img {
-    max-height: min(34vh, 240px);
+    max-height: clamp(130px, 30dvh, 220px);
   }
 
   .modal-gallery__controls {
@@ -87,18 +98,19 @@
   }
 
   .modal-gallery__arrow {
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     font-size: 1.2rem;
+    touch-action: manipulation;
   }
 
   .modal-gallery__track {
-    max-width: calc(100% - 4rem);
+    max-width: calc(100% - 5.5rem);
   }
 
   .modal-thumb {
-    flex: 0 0 52px;
-    height: 38px;
+    flex: 0 0 48px;
+    height: 36px;
   }
 
   .modal-info p {
@@ -108,15 +120,16 @@
 
   .modal-actions {
     flex-direction: column;
+    gap: 0.55rem;
   }
 
   .modal-actions .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.75rem 1rem;
+    touch-action: manipulation;
   }
-}
 
-@media (max-width: 760px) {
   .navbar {
     flex-wrap: wrap;
     padding: 0.8rem 0;
@@ -198,21 +211,44 @@
 }
 
 @media (max-width: 420px) {
-  .project-modal {
-    padding: 0.35rem;
-  }
-
   .project-modal__dialog {
     padding: 0.75rem 0.8rem 0.9rem;
   }
 
   .modal-gallery__img {
-    max-height: min(30vh, 200px);
+    max-height: clamp(110px, 26dvh, 180px);
   }
 
   .modal-tech-tag {
     font-size: 0.75rem;
     padding: 0.35rem 0.6rem;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 520px) {
+  .project-modal__dialog {
+    padding: 0.65rem 0.75rem 0.75rem;
+  }
+
+  .project-modal__header {
+    margin-bottom: 0.45rem;
+  }
+
+  .modal-gallery__img {
+    max-height: clamp(90px, 22dvh, 140px);
+  }
+
+  .modal-gallery__controls {
+    margin-top: 0.35rem;
+  }
+
+  .modal-info {
+    gap: 0.5rem;
+  }
+
+  .modal-info p {
+    font-size: 0.82rem;
+    line-height: 1.55;
   }
 }
 

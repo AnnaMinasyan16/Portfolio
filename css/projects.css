@@ -252,9 +252,12 @@ body.modal-open {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.85rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.28s ease, visibility 0.28s ease;
@@ -276,10 +279,11 @@ body.modal-open {
   position: relative;
   z-index: 1;
   width: min(780px, 100%);
-  max-height: min(88vh, 760px);
+  max-height: min(88dvh, 760px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin: auto;
   padding: 1.15rem 1.25rem;
   border-radius: calc(var(--radius) + 2px);
   background: rgba(255, 255, 255, 0.88);
@@ -341,11 +345,14 @@ body.modal-open {
 
 .modal-gallery {
   width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .modal-gallery__main {
   width: 100%;
-  min-height: 80px;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,7 +367,7 @@ body.modal-open {
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: min(38vh, 340px);
+  max-height: min(38dvh, 340px);
   object-fit: contain;
   object-position: center;
   transition: opacity 0.35s ease;
@@ -372,6 +379,8 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .modal-gallery__arrow {
@@ -454,12 +463,14 @@ body.modal-open {
   gap: 0.75rem;
   align-content: start;
   padding-top: 0;
+  min-width: 0;
 }
 
 .modal-info p {
   color: #4e5164;
   line-height: 1.75;
   font-size: 0.92rem;
+  overflow-wrap: anywhere;
 }
 
 .modal-tech-list {
