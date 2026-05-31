@@ -253,6 +253,7 @@ function openProjectModal(projectId) {
   const modal = document.getElementById("projectModal");
   fillModalContent(projectId);
   modal.hidden = false;
+  document.documentElement.classList.add("modal-open");
   document.body.classList.add("modal-open");
 
   requestAnimationFrame(() => modal.classList.add("is-visible"));
@@ -261,6 +262,7 @@ function openProjectModal(projectId) {
 function closeProjectModal() {
   const modal = document.getElementById("projectModal");
   modal.classList.remove("is-visible");
+  document.documentElement.classList.remove("modal-open");
   document.body.classList.remove("modal-open");
 
   setTimeout(() => {
