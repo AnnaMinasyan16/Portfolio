@@ -246,10 +246,15 @@
 
 html.modal-open {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 body.modal-open {
   overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body.modal-open--fixed {
   position: fixed;
   left: 0;
   right: 0;
@@ -259,7 +264,10 @@ body.modal-open {
 
 .project-modal {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -268,6 +276,7 @@ body.modal-open {
   max-width: 100%;
   padding: 0.85rem;
   overflow: hidden;
+  overscroll-behavior: none;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.28s ease, visibility 0.28s ease;
@@ -359,6 +368,8 @@ body.modal-open {
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 .modal-gallery {

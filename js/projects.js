@@ -81,21 +81,6 @@ const projectsData = [
 
 let activeProjectId = null;
 let activeSlideIndex = 0;
-let modalScrollY = 0;
-
-function lockPageScroll() {
-  modalScrollY = window.scrollY;
-  document.documentElement.classList.add("modal-open");
-  document.body.classList.add("modal-open");
-  document.body.style.top = `-${modalScrollY}px`;
-}
-
-function unlockPageScroll() {
-  document.documentElement.classList.remove("modal-open");
-  document.body.classList.remove("modal-open");
-  document.body.style.top = "";
-  window.scrollTo(0, modalScrollY);
-}
 
 function getLang() {
   return localStorage.getItem("portfolioLanguage") || "ru";
@@ -229,7 +214,7 @@ function renderGallery(project, index) {
   activeSlideIndex = safeIndex;
 
   const main = document.getElementById("modalGalleryMain");
-  main.innerHTML = `<img src="${slides[safeIndex]}" alt="${project.name} — screenshot ${safeIndex + 1}" class="modal-gallery__img" loading="lazy" />`;
+  main.innerHTML = `<img src="${slides[safeIndex]}" alt="${project.name} — screenshot ${safeIndex + 1}" class="modal-gallery__img" loading="lazy" decoding="async" />`;
   main.setAttribute("aria-label", `${project.name} preview ${safeIndex + 1}`);
 
   const track = document.getElementById("modalGalleryTrack");
@@ -268,7 +253,7 @@ function openProjectModal(projectId) {
   const modal = document.getElementById("projectModal");
   fillModalContent(projectId);
   modal.hidden = false;
-  lockPageScroll();
+  window.PageScrollLock?.lockPageScroll();
 
   requestAnimationFrame(() => modal.classList.add("is-visible"));
 }
@@ -276,7 +261,7 @@ function openProjectModal(projectId) {
 function closeProjectModal() {
   const modal = document.getElementById("projectModal");
   modal.classList.remove("is-visible");
-  unlockPageScroll();
+  window.PageScrollLock?.unlockPageScroll();
 
   setTimeout(() => {
     modal.hidden = true;

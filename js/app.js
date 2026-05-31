@@ -119,7 +119,7 @@ function showContactSuccessModal() {
   if (!modal) return;
 
   modal.hidden = false;
-  document.body.classList.add("modal-open");
+  window.PageScrollLock?.lockPageScroll();
   requestAnimationFrame(() => modal.classList.add("is-visible"));
   document.getElementById("contactSuccessOk")?.focus();
 }
@@ -129,7 +129,7 @@ function closeContactSuccessModal() {
   if (!modal) return;
 
   modal.classList.remove("is-visible");
-  document.body.classList.remove("modal-open");
+  window.PageScrollLock?.unlockPageScroll();
 
   setTimeout(() => {
     modal.hidden = true;
@@ -158,7 +158,7 @@ function openCertificateLightbox(img) {
   lightboxImg.src = img.currentSrc || img.src;
   lightboxImg.alt = img.alt || "";
   modal.hidden = false;
-  document.body.classList.add("modal-open");
+  window.PageScrollLock?.lockPageScroll();
   requestAnimationFrame(() => modal.classList.add("is-visible"));
   document.getElementById("certificateLightboxClose")?.focus();
 }
@@ -168,7 +168,7 @@ function closeCertificateLightbox() {
   if (!modal) return;
 
   modal.classList.remove("is-visible");
-  document.body.classList.remove("modal-open");
+  window.PageScrollLock?.unlockPageScroll();
 
   setTimeout(() => {
     modal.hidden = true;
